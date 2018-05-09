@@ -44,6 +44,29 @@ public class Main {
         Union contains 196 elements.
          */
 
+        System.out.println("------------------------------------------------");
+        System.out.println("now we are getting the intersection......");
+
+        //step 7 get the intersection
+        Set<Integer> intersection = new HashSet<Integer>(squares);
+        intersection.retainAll(cubes);
+        System.out.println("Intersection contains " + intersection.size() + " elements.");
+        for (int i : intersection) {
+            System.out.println(i + " is the square of " + Math.sqrt(i) +
+                    " and the cube of " + Math.cbrt(i));
+
+            //step 8 then run....
+            /*results;
+            There are 100 squares and 100 cubes
+            Union contains 196 elements.
+            Intersection contains 4 elements.
+            4096 is the square of 64.0 and the cube of 16.0
+            1 is the square of 1.0 and the cube of 1.0
+            64 is the square of 8.0 and the cube of 4.0
+            729 is the square of 27.0 and the cube of 9.0
+             */
+        }
+
     }
 
 }
