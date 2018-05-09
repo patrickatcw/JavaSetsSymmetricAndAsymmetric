@@ -29,6 +29,21 @@ public class Main {
         There are 100 squares and 100 cubes
          */
 
+        System.out.println("------------------------------------------------");
+        System.out.println("just printing the size of the result......");
+
+        //step 5 let's just print the size of the result to confirm
+        // things are working
+        Set<Integer> union = new HashSet<Integer>(squares); //new hashset variable
+        union.addAll(cubes);
+        System.out.println("Union contains " + union.size() + " elements.");
+
+        //step 6 now run....
+        /*results;
+        There are 100 squares and 100 cubes
+        Union contains 196 elements.
+         */
+
     }
 
 }
