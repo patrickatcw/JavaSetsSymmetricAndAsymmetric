@@ -140,6 +140,27 @@ public class Main {
 	    all but art thee err nature forgive divine human unknown
          */
 
+        System.out.println("**************************************************");
+        System.out.println("contains all is used to test if one set is a superset " +
+                "of another, only testing membership, non-destructive, does not modify" +
+                "the sets");
+        //step 16 the last bulk operation, contains all
+        if(nature.containsAll(divine)){
+            System.out.println("divine is a subset of nature");
+        }
+        if(nature.containsAll(intersectionTest)){
+            System.out.println("intersection is a subset of nature");
+        }
+        if(divine.containsAll(intersectionTest)){
+            System.out.println("intersection is a subset of divine");
+        }
+
+        //step 17 run
+        /*result;
+        intersection is a subset of nature
+        intersection is a subset of divine
+         */
+
     }
 
     //step 12 printSet method
