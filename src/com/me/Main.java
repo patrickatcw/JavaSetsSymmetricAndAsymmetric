@@ -120,6 +120,25 @@ public class Main {
             divine - nature:
             err forgive divine human
              */
+        System.out.println("-----------------------------------------");
+        System.out.println("symmetric difference is removing the intersection from the union");
+
+        //step 14 get the symmetric difference
+        Set<String> unionTest = new HashSet<String>(nature);
+        unionTest.addAll(divine);
+        Set<String> intersectionTest = new HashSet<String>(nature);
+        intersectionTest.retainAll(divine);
+
+        System.out.println("Symmetric difference");
+        unionTest.removeAll(intersectionTest);
+        printSet(unionTest);
+
+        //step 15 run
+        /*results;
+        symmetric difference is removing the intersection from the union
+        Symmetric difference
+	    all but art thee err nature forgive divine human unknown
+         */
 
     }
 
