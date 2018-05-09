@@ -1,5 +1,6 @@
 package com.me;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -66,6 +67,70 @@ public class Main {
             729 is the square of 27.0 and the cube of 9.0
              */
         }
+
+        System.out.println("--------------------------------------------");
+        System.out.println("calculating the asymmetric difference....");
+
+        //step 9 calculate the asymmetric difference
+        Set<String> words = new HashSet<String>(); //empty constructor
+        String sentence = "one day in the year of the fox";
+        String[] arrayWords = sentence.split(" ");
+        words.addAll(Arrays.asList(arrayWords));
+
+        for (String s : words) {
+            System.out.println(s);
+
+            //step 10 then run
+            /*results;
+            the
+            in
+            year
+            one
+            of
+            day
+            fox
+             */
+        }
+
+        System.out.println("----------------------------------------------------------");
+        System.out.println("demonstrating asymmetric difference, showing word difference");
+
+        //step 11 new stuff for demo on asymmetric differences
+        Set<String> nature = new HashSet<String>(); //empty constructor
+        Set<String> divine = new HashSet<String>(); //empty constructor
+        String[] natureWords = {"all", "nature", "is", "but", "art", "unknown", "to", "thee"};
+        nature.addAll(Arrays.asList(natureWords));  //calling the java asList method
+
+        String[] divineWords = {"to", "err", "is", "human", "to", "forgive", "divine"};
+        divine.addAll(Arrays.asList(divineWords));  //calling the java asList method
+
+        System.out.println("nature - divine:");
+        Set<String> diff1 = new HashSet<String>(nature);
+        diff1.removeAll(divine);
+        printSet(diff1);
+
+        System.out.println("divine - nature:");
+        Set<String> diff2 = new HashSet<String>(divine);
+        diff2.removeAll(nature);
+        printSet(diff2);
+
+        /*results; by running in step 13
+            nature - divine:
+            all but art thee nature unknown
+            divine - nature:
+            err forgive divine human
+             */
+
+    }
+
+    //step 12 printSet method
+    private static void printSet(Set<String> set) {
+        System.out.print("\t");
+        for(String s : set) {
+            System.out.print(s + " ");
+        }
+        System.out.println();
+        //step 13 run
 
     }
 
